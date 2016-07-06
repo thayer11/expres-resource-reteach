@@ -59,7 +59,7 @@ A basic starter code version has been included in this repo.
 1. How can you help guard against candies being created that don't meet all the requirements(id, name, color)? 
 2. Can you add better error handling to the API 
 	1. Return status code 404 if there 
-	2. Return status code 422 if there is not enough information to create or 
+	2. Return status code 422 if there is not enough information to create or add a Candy
 3. Refactor the routes in a controller file.
 
 
