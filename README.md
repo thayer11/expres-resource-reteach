@@ -25,15 +25,15 @@ Another major advantage of Postman is that you can store groups of requests into
 REST is based around the concept of a Resource. A resource is just an object and a standardized set of URL routes for accessing 
 information around those objects. Here are the RESTful routes:
 
-Name	| Format				| Meaning
------------------------------------------------------------------------------------
-Index	| GET resource/			| Return multiple, often all instances of the resource
-Show	| GET resource/:id		| Return a single resource with :id 
-Create	| POST resource/		| Create a resource
-Update	| PUT resource/:id		| Update resource with :id 
-Delete	| DELETE resource/:id	| Delete resource with :id
-Edit	| GET resource/:id/edit	| Typically HTML only, form or information to update resource with :id
-New		| GET resource/:id/new	| Typically HTML only, form of information to create resource 
+Name	| Format				| Meaning |
+--------|---------------------------------------|---------|------------------------|
+Index	| GET resource/			| Return multiple, often all instances of the resource |
+Show	| GET resource/:id		| Return a single resource with :id |
+Create	| POST resource/		| Create a resource |
+Update	| PUT resource/:id		| Update resource with :id | 
+Delete	| DELETE resource/:id	| Delete resource with :id |
+Edit	| GET resource/:id/edit	| Typically HTML only, form or information to update resource with :id |
+New		| GET resource/:id/new	| Typically HTML only, form of information to create resource |
 
 To say that an API is RESTful means that if the API implements functional that corresponds to a RESTful action it uses the RESTful 
 route. A RESTful API may not use all of the routes but if a functionality is present then it is accessed with the RESTful route. 
@@ -45,13 +45,13 @@ Our basic resource for this lab is the candy object.
 ```javascript
 {
 	id: 1,
-	name: "chewing gum,
+	name: "chewing gum",
 	color: "red"
 }
 ```
 
 ## Requirements
-The goal for the lab is to write enough code so that all of the requests in [this collection]() are implemented.
+The goal for the lab is to write enough code so that all of the requests in [this collection](https://raw.githubusercontent.com/den-wdi-1/expres-resource-reteach/master/candies_collection.postman_collection) are implemented.
 
 A basic starter code version has been included in this repo.
 
