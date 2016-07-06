@@ -1,0 +1,16 @@
+{
+  "name": "express-resource-reteach",
+  "version": "1.0.0",
+  "description": "Express Resource Starter Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "repository": "http://github.com/den-wdi-1/express-resource-reteach.git"
+}

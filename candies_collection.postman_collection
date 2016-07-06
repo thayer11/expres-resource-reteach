@@ -1,0 +1,126 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Candies Collection",
+		"_postman_id": "d2d8b4e0-3241-8fb1-31e1-1c36f0ed5b98",
+		"description": "Test end points in the candies collection\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Candies Index Route ",
+			"request": {
+				"url": "http://localhost:3000/candies",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jpbarela@tapis.io",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "First time run should return\n[\n  {\n    \"id\": 1,\n    \"name\": \"Chewing Gum\",\n    \"color\": \"Red\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Pez\",\n    \"color\": \"Green\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Marshmallow\",\n    \"color\": \"Pink\"\n  }\n]"
+			},
+			"response": []
+		},
+		{
+			"name": "Candies Show Route ",
+			"request": {
+				"url": "http://localhost:3000/candies/3",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Should return\n{\n    \"id\": 3,\n    \"name\": \"Marshmallow\",\n    \"color\": \"Pink\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Candies Create Route Id Included",
+			"request": {
+				"url": "http://localhost:3000/candies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"4\", \"name\": \"M&M\", \"color\": \"Green\"}"
+				},
+				"description": "Should return \n{id: 4, name: \"M&M\", color: \"Green\" }"
+			},
+			"response": []
+		},
+		{
+			"name": "Candies Create Route Id not included",
+			"request": {
+				"url": "http://localhost:3000/candies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Kit Kat\", \"color\":\"Brown\"}"
+				},
+				"description": "Should return\n{\n  \"name\": \"Kit Kat\",\n  \"color\": \"Brown\",\n  \"id\": some id\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Candies Update Route ",
+			"request": {
+				"url": "localhost:3000/candies/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"chewing gum\", \"color\": \"red\"}"
+				},
+				"description": "Updates the first candy's color to red, should keep the id the same."
+			},
+			"response": []
+		},
+		{
+			"name": "Candies Delete Route",
+			"request": {
+				"url": "http://localhost:3000/candies/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Can return a message or not"
+			},
+			"response": []
+		}
+	]
+}
